@@ -6,11 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <input id="volume" type="range" min="1" max="100" value="50">
+    <input id="volume" type="range" min="0" max="100" value="50">
+    <button id="open">Open</button>
     <button id="save">Save</button>
     <script>
         const volume = document.getElementById("volume");
+        const openButton = document.getElementById("open");
         const saveButton = document.getElementById("save");
+
+        openButton.addEventListener("click", () => {
+            fetch('/open', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: "1234"
+            })
+            .then(response => response.json())
+            .then(data => console.log(data));
+        });
 
         saveButton.addEventListener("click", () => {
             fetch('/save', {
