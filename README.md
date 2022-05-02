@@ -5,3 +5,4 @@ dmake-ui-server
 ### TODOs
 - [ ] MIDI diff
   - [MIDI Comparison Tool](https://jrg94.github.io/JuxtaMIDI/midiviz/dashboard.html)
+    - [jrg94/JuxtaMIDI: Pinpointing Mistakes in MIDI Practice Recordings](https://github.com/jrg94/JuxtaMIDI)
